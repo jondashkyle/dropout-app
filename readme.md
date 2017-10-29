@@ -2,7 +2,7 @@
 
 Dropout of the centralized web and drop into Beaker Browser, a p2p web browser. This is an interface for using `dropout` within Beaker. It uses a self-deployable microservice ([`dropout-service`](https://github.com/jondashkyle/dropout-service)) to scrape pages and return the results to Beaker.
 
-## customizing
+## customization
 
 The webapp is built with [`choo`](https://github.com/choojs/choo), a super lightweight and understandable front-end framework. Open your site directory in terminal and run `npm install`. The site’s source is contained in `src/`, and can be hacked away however you’d like.
 
