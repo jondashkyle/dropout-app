@@ -8,6 +8,7 @@ First [download and install Beaker Browser](https://beakerbrowser.com/docs/insta
 
 ```
 dat://dropout.jon-kyle.com
+dat://8b79c46e3484ae0f1fbe530711a762214543f2c37c4d323cb523450927b6f042
 ```
 
 Dropout uses Beaker’s experimental [web api to read and write](https://beakerbrowser.com/docs/apis/) to the Dat archive.
