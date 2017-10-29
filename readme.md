@@ -4,11 +4,11 @@ Dropout of the centralized web and drop into Beaker Browser, a p2p web browser. 
 
 ## usage
 
-Visit either:
+First [download and install Beaker Browser](https://beakerbrowser.com/docs/install/), then visit the Dat URL:
 
-- [https://dropout.jon-kyle.com](https://dropout.jon-kyle.com)
-- [dat://dropout.jon-kyle.com](dat://dropout.jon-kyle.com)
-- [dat://0167c188c2de9bc68ca4cc9b8543e00952f9920c4b7d987a70b2e2fd4a7158e2/](dat://0167c188c2de9bc68ca4cc9b8543e00952f9920c4b7d987a70b2e2fd4a7158e2/)
+```
+dat://8b79c46e3484ae0f1fbe530711a762214543f2c37c4d323cb523450927b6f042/)
+```
 
 ![](http://drop.jon-kyle.com/modules/dropout-beaker-2.png)
 

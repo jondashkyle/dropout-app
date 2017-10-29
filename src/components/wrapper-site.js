@@ -23,7 +23,7 @@ function noArchive (state, emit) {
         <p>The project requires Beaker Browser and it’s experimental <code>web api</code> to function. Good news; it’s really easy to start, and once downloaded you can begin browsing and publishing to the rest of the p2p web, too.</p>
         <ol>
           <li>Download and install <a href="http://beakerbrowser.com">Beaker Browser</a>.</li>
-          <li>For now, navigate to <a href="dat://0167c188c2de9bc68ca4cc9b8543e00952f9920c4b7d987a70b2e2fd4a7158e2/">the Dat archive url</a>.</li>
+          <li>For now, navigate to <a href="dat://8b79c46e3484ae0f1fbe530711a762214543f2c37c4d323cb523450927b6f042/">the Dat archive url</a>.</li>
           <li>If you’d like to create your own, click Fork inside Beaker. Feel free to customize as the entire source is included.</li>
         </ul>
         <p>For more, visit the <a href="https://github.com/jondashkyle/dropout-beaker">repository</a> or <a href="https://jon-kyle.com/entries/2017-10-26-dropout/">the log entry</a>.
