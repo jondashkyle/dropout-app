@@ -1,0 +1,7 @@
+{
+  "directory": "/content",
+  "microservice": "https://melodic-comfort.glitch.me/",
+  "xmicroservice": "http://localhost:8080",
+  "loadinline": true,
+  "dateformat": "mmmm dS"
+}
