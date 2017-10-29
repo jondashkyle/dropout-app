@@ -26,6 +26,10 @@ Want to contribute? Please do! Alternatively, donations and funding are being ac
 
 Beaker requires all connections to be over https, preventing external assets such as images from being loaded over http. Of course this is desired functionality, and ultimately media assets (images, videos, audio) should be detected and scraped, too. This is a somewhat more extensive feature which will hopefully be added soon.
 
+## elsewhere
+
+- Set in [Cotham](https://github.com/sebsan/Cotham) by Sebastien Sanfilippo of [Love Letters](http://www.love-letters.be/)
+
 ## todo
 
 - [ ] Scrape image assets (breaks with http)
