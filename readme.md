@@ -1,6 +1,6 @@
 <h1 align="center">dropout-beaker</h1>
 
-dropout of the centralized web and drop into beaker
+Dropout of the centralized web and drop into Beaker Browser, a p2p web browser. This is an interface for using `dropout` within Beaker. It uses a self-deployable microservice ([`dropout-service`](https://github.com/jondashkyle/dropout-service)) to scrape pages and return the results to Beaker.
 
 ## customizing
 
@@ -10,7 +10,7 @@ You can also adjust the design of the page content without being required to ins
 
 ## known bugs
 
-Want to contribute? Please do! Alternatively, donations and funding are being accepted for dedicating time to designing and developing the features you’d like to see. Get in touch if you’re curious.
+Want to contribute? Please do! Alternatively, donations and funding are being accepted for dedicating time to design and development of features you’d like to see. Get in touch if you’re curious.
 
 ### Image assets do not load
 
@@ -21,8 +21,10 @@ Beaker requires all connections to be over https, preventing external assets suc
 - [ ] Scrape image assets (breaks with http)
 - [ ] Sticky navigation
 - [ ] Search/filter page list
-- [ ] Cloning
+- [ ] Cloning/Forking UI
+- [ ] Reset
 - [ ] Settings Panel
+- [ ] Prev/Next in footer
 
 ## change log
 
