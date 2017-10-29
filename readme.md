@@ -10,7 +10,7 @@ Visit either:
 - [dat://dropout.jon-kyle.com](dat://dropout.jon-kyle.com)
 - [dat://0167c188c2de9bc68ca4cc9b8543e00952f9920c4b7d987a70b2e2fd4a7158e2/](dat://0167c188c2de9bc68ca4cc9b8543e00952f9920c4b7d987a70b2e2fd4a7158e2/)
 
-![](http://drop.jon-kyle.com/modules/dropout-beaker.png)
+![](http://drop.jon-kyle.com/modules/dropout-beaker-2.png)
 
 ## customization
 
