@@ -3,4 +3,5 @@ node_modules/
 dat.json
 bundles/*.css
 bundles/*.js
-content/**
+content/
+!content/.gitinclude
