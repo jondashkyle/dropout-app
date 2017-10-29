@@ -7,8 +7,10 @@ Dropout of the centralized web and drop into Beaker Browser, a p2p web browser. 
 First [download and install Beaker Browser](https://beakerbrowser.com/docs/install/), then visit the Dat URL:
 
 ```
-dat://8b79c46e3484ae0f1fbe530711a762214543f2c37c4d323cb523450927b6f042/)
+dat://dropout.jon-kyle.com
 ```
+
+Dropout uses Beaker’s experimental [web api to read and write](https://beakerbrowser.com/docs/apis/) to the Dat archive.
 
 ![](http://drop.jon-kyle.com/modules/dropout-beaker-2.png)
 
@@ -32,6 +34,7 @@ Beaker requires all connections to be over https, preventing external assets suc
 
 ## todo
 
+- [ ] Show fork instead of add if not Dat Owner
 - [ ] Scrape image assets (breaks with http)
 - [ ] Search/filter page list
 - [ ] Cloning/Forking UI
