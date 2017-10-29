@@ -8,9 +8,7 @@
 .markdown-body {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  color: #24292e;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  line-height: 1.5;
+  color: #000;
   word-wrap: break-word;
   max-width: 50rem;
   margin: 0 auto;
@@ -50,7 +48,7 @@
 .markdown-body .pl-sr .pl-cce,
 .markdown-body .pl-sr .pl-sre,
 .markdown-body .pl-sr .pl-sra {
-  color: #032f62;
+  color: #000;
 }
 
 .markdown-body .pl-v,
@@ -215,8 +213,7 @@
 }
 
 .markdown-body a {
-  color: #0366d6;
-  text-decoration: none;
+  color: #000;
 }
 
 .markdown-body a:hover {
@@ -268,38 +265,38 @@
 }
 
 .markdown-body h1 {
-  font-size: 3rem;
+  font-size: 3em;
   font-weight: 600;
 }
 
 .markdown-body h2 {
-  font-size: 2rem;
+  font-size: 2em;
   font-weight: 600;
 }
 
 .markdown-body h3 {
-  font-size: 1.5rem;
+  font-size: 1.5em;
   font-weight: 600;
 }
 
 .markdown-body h4 {
-  font-size: 1rem;
+  font-size: 1em;
   font-weight: 600;
 }
 
 .markdown-body h5 {
-  font-size: 1rem;
+  font-size: 1em;
   font-weight: 600;
 }
 
 .markdown-body h6 {
-  font-size: 1rem;
+  font-size: 1em;
   font-weight: 600;
 }
 
 .markdown-body p {
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: 1.5em;
 }
 
 .markdown-body blockquote {
@@ -338,7 +335,7 @@
   margin-top: 0;
   margin-bottom: 0;
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  font-size: 12px;
+  font-size: 1em;
 }
 
 .markdown-body .octicon {
@@ -416,7 +413,7 @@
 .markdown-body table,
 .markdown-body pre {
   margin-top: 0;
-  margin-bottom: 16px;
+  margin-bottom: 1.5em;
 }
 
 .markdown-body hr {
@@ -461,10 +458,9 @@
 .markdown-body h4,
 .markdown-body h5,
 .markdown-body h6 {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
   font-weight: 600;
-  line-height: 1.25;
 }
 
 .markdown-body h1 .octicon-link,
@@ -534,7 +530,7 @@
 }
 
 .markdown-body li>p {
-  margin-top: 16px;
+  margin-top: 1.5em;
 }
 
 .markdown-body li+li {

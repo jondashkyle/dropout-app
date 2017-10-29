@@ -15,7 +15,7 @@ function panelSave (props) {
     <form class="w100" onsubmit=${handleSubmit}>
       <input
         id="page-input"
-        class="ff-sans fsvw5 fw300 p0 m0 db w100 bgc-transparent fc-black tac"
+        class="ff-sans fsvw6 ff-heading p0 m0 db w100 bgc-transparent fc-black tac"
         style="border: 0; outline: 0;"
         type="text"
         value="${props.value}"

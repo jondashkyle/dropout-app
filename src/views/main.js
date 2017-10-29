@@ -96,7 +96,7 @@ function view (state, emit) {
 
 function pages (props) {
   return html`
-    <div id="pages-list" class="p0-5">
+    <div id="pages-list" class="ff-heading pvw2">
       ${props.pages.map(page)}
     </div>
   `
@@ -108,9 +108,9 @@ function page (props) {
   return html`
     <a
       href="/${props.basename}"
-      class="x tdn fc-black p0-5 ${props.read ? 'op50 oph100' : ''}"
+      class="x tdn fc-black pvw2 ${props.read ? 'op50 oph100' : ''}"
     >
-      <div class="fsvw5 fw300 lh1-25 ti1">
+      <div class="fsvw6 fw300 lh1-1 ti1">
         ${props.title}
       </div>
     </a>

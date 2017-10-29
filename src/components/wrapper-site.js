@@ -16,8 +16,8 @@ function wrapper (view) {
 
 function noArchive (state, emit) {
   return html`
-    <body class="bgc-white fc-black ff-sans lh1-25 vhmn100 vw100 x xjc xac p2">
-      <div class="markdown-body">
+    <body class="bgc-white fc-black ff-sans lh1-5 vhmn100 vw100 x xjc xac p2">
+      <div class="markdown-body ff-heading copy fs1-5">
         <p>When interfaces are designed for capturing and exhausting your attention going offline is both an act of liberation and luxury. This is a tool of ethical technology enabling you to save pages for offline access and personal archival.</p>
         <p>The project requires Beaker Browser and it’s experimental <code>web api</code> to function. Good news; it’s really easy to start, and once downloaded you can begin browsing and publishing to the rest of the p2p web, too.</p>
         <ol>

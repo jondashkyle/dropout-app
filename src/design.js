@@ -2,6 +2,7 @@ var gr8 = require('gr8')
 
 var typography = {
   sans: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif',
+  heading: '"Cotham", sans-serif',
   mono: '"SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace'
 }
 
@@ -39,9 +40,15 @@ utils.push({
 })
 
 utils.push({
+  prop: { pvw: 'padding' },
+  unit: 'vw',
+  vals: [0, 0.5, 1, 1.5, 2]
+})
+
+utils.push({
   prop: { fsvw: 'font-size' },
   unit: 'vw',
-  vals: [1, 1.5, 2, 2.5, 5]
+  vals: [1, 1.5, 2, 2.5, 5, 6]
 })
 
 utils.push({
@@ -69,9 +76,9 @@ utils.push({
 })
 
 var gr8css = gr8({
-  lineHeight: [1, 1.25, 1.5],
+  lineHeight: [1, 1.1, 1.25, 1.5],
   spacing: [0.5, 1, 1.5, 2, 3, 4],
-  fontSize: [0, 0.75, 1, 2, 3],
+  fontSize: [0, 0.75, 1, 1.5, 2, 3],
   utils: utils
 })
 
@@ -143,6 +150,11 @@ var custom = `
   ::-moz-placeholder { color: ${colors.black}; }
   :-ms-input-placeholder { color: ${colors.black}; }
   :-moz-placeholder { color: ${colors.black}; }
+
+  @font-face {
+    font-family: 'Cotham';
+    src: url('/bundles/CothamSans.otf');
+}
 `
 
 module.exports = gr8css + custom

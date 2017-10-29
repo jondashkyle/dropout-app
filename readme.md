@@ -35,6 +35,7 @@ Beaker requires all connections to be over https, preventing external assets suc
 - [ ] Settings Panel
 - [ ] Prev/Next in footer
 - [ ] Mark as read when reaching bottom of page
+- [ ] Keyboard shortcuts
 
 ## change log
 
