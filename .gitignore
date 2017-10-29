@@ -1,6 +1,11 @@
 .DS_Store
 node_modules/
+
+# dat
+.well-known/
 dat.json
+
+# app
 bundles/*.css
 bundles/*.js
 content/

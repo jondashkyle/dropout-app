@@ -7,11 +7,15 @@ var xhr = require('xhr')
 module.exports = expose
 
 function expose (datUrl) {
-  assert.equal(typeof DatArchive, 'function', 'DatArchive must be type function')
-  var archive = new DatArchive(datUrl || window.location.toString())
-  var fs = makeDatFs(archive)
-
   return function plugin (state, emitter, app) {
+    try {
+      var archive = new DatArchive(datUrl || window.location.toString())
+    } catch (err) {
+      return noArchive()
+    }
+
+    var fs = makeDatFs(archive)
+
     state.events = state.events || { }
     state.dropout = {
       loaded: false,
@@ -112,6 +116,11 @@ function expose (datUrl) {
         if (typeof data.callback === 'function') data.callback(response)
         if (data.render !== false) emitter.emit(state.events.RENDER)
       })
+    }
+
+    function noArchive () {
+      state.dropout = false
+      emitter.emit(state.events.RENDER)
     }
   }
 }
