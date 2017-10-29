@@ -24,17 +24,19 @@ Beaker requires all connections to be over https, preventing external assets suc
 
 ## todo
 
-- [ ] Deploy on server and add dat
 - [ ] Scrape image assets (breaks with http)
-- [ ] Sticky navigation
 - [ ] Search/filter page list
 - [ ] Cloning/Forking UI
 - [ ] Reset
 - [ ] Settings Panel
 - [ ] Prev/Next in footer
+- [ ] Mark as read when reaching bottom of page
 
 ## change log
 
 ### 10/28/2017
 
-First release!
+First release! Apart from making the damn thing there were these other items:
+
+- [x] Sticky navigation
+- [x] Deploy on server and add dat
