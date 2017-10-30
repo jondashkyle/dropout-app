@@ -54,6 +54,8 @@ Beaker requires all connections to be over https, preventing external assets suc
 ## todo
 
 - [ ] General design
+- [ ] Fallback to localstorage if the web api is not available
+- [ ] Export from localstorage to JSON, drag into app
 - [ ] Save static HTML in addition to JSON
 - [ ] Scrape image assets (breaks with http)
 - [ ] Search/filter page list
