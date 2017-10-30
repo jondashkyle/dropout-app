@@ -5,17 +5,20 @@
   "main": "src/index.js",
   "scripts": {
     "deploy": "dat sync --no-ignoreHidden",
-    "start": "watchify src/index.js -o bundles/bundle.js -t browserify-nodent -t sheetify -p [ css-extract -o bundles/bundle.css ] src/index.js",
-    "build": "browserify src/index.js -o bundles/bundle.js -t browserify-nodent -t [ sheetify -u sheetify-cssnext ] -p [ css-extract -o bundles/bundle.css ]"
+    "start": "watchify -o bundles/bundle.js -t browserify-nodent -t sheetify -p [ css-extract -o bundles/bundle.css ] src/index.js",
+    "build": "browserify -t browserify-nodent -t [ sheetify -u sheetify-cssnext ] -p [ css-extract -o bundles/bundle.css ] -p common-shakeify -p browser-pack-flat/plugin src/index.js -g uglifyify > bundles/bundle.js"
   },
   "keywords": [],
   "author": "Jon-Kyle <contact@jon-kyle.com> (http://jon-kyle.com)",
   "license": "ISC",
   "devDependencies": {
+    "browser-pack-flat": "^3.0.3",
     "browserify": "^14.4.0",
     "browserify-nodent": "^1.0.22",
-    "sheetify-cssnext": "^1.0.7",
+    "common-shakeify": "^0.4.4",
     "css-extract": "^1.2.0",
+    "sheetify-cssnext": "^1.0.7",
+    "uglifyify": "^4.0.4",
     "watchify": "^3.9.0"
   },
   "dependencies": {
