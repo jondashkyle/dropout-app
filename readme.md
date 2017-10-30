@@ -13,7 +13,7 @@ dat://8b79c46e3484ae0f1fbe530711a762214543f2c37c4d323cb523450927b6f042
 
 Dropout uses Beaker’s experimental [web api to read and write](https://beakerbrowser.com/docs/apis/) to the Dat archive, which requires you to be connected through `dat://` and not `https://`. If the web api is not available a message is displayed detailing the necessary steps to get going.
 
-![](http://drop.jon-kyle.com/modules/dropout-beaker-2.png)
+[![](http://drop.jon-kyle.com/modules/dropout-beaker-2.png)](http://dropout.jon-kyle.com)
 
 ## structure and functionality
 
