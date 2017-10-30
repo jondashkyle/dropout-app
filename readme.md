@@ -1,10 +1,10 @@
 <h1 align="center">dropout-app</h1>
 
-Dropout of the centralized web and into the p2p web! This is a webapp for using [`dropout`](https://github.com/jondashkyle/dropout) with [Beaker Browser](https://beakerbrowser.com). In addition to being a fully usable webapp, this might also be a nice peak into Choo architecture and Beaker’s web API.
+Dropout of the centralized web and into the p2p web! This is a webapp for using [`dropout`](https://github.com/jondashkyle/dropout) with [Beaker Browser](https://beakerbrowser.com). It’s sort of like your own fully customizable and offline version of Instapaper. In addition to being a fully usable webapp, this might also be a nice peak into Choo architecture and Beaker’s web API.
 
 ## usage
 
-First [download and install Beaker Browser](https://beakerbrowser.com/docs/install/), then visit the Dat URL:
+First [download and install Beaker Browser](https://beakerbrowser.com/docs/install/), then visit the Dat URL. Once there, click the Fork button in the lower right!
 
 ```
 dat://dropout.jon-kyle.com
