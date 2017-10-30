@@ -1,6 +1,6 @@
 <h1 align="center">dropout-app</h1>
 
-Dropout of the centralized web and into the p2p web! This is a webapp for using [`dropout`](https://github.com/jondashkyle/dropout) with [Beaker Browser](https://beakerbrowser.com).
+Dropout of the centralized web and into the p2p web! This is a webapp for using [`dropout`](https://github.com/jondashkyle/dropout) with [Beaker Browser](https://beakerbrowser.com). In addition to being a fully usable webapp, this might also be a nice peak into Choo architecture and Beaker’s web API.
 
 ## usage
 
@@ -24,6 +24,8 @@ Dropout uses Beaker’s experimental [web api to read and write](https://beakerb
 Sites deployed with Dat and viewable in Beaker are static, meaning they can not execute modules which utilize binaries. The readability module must be run on a server. To get around this limitation a request to an easily [self-deployable microservice](https://github.com/jondashkyle/dropout-service) is made from within the webapp. Of course, this requires an internet connection, however the limitation would be present even if able to run strictly within the client as a request to the page being scraped must be made.
 
 To run you very own instance, simply navigate to [Glitch and click the Fork button](https://glitch.com/edit/#!/melodic-comfort?path=index.js:1:0). Glitch will generate a URL for you. Copy that and open `dropout.json` in the root of your app. Paste it as the value of `microservice`. That’s it!
+
+You might be wondering, “If you can’t run server side code, how do you save data without using localstorage?” What’s awesome about Dat and Beaker is “Everything Is A File.” Beaker’s web api mirrors that of Node’s `fs` module. Saving data is as simple as reading and writing folders and files.
 
 ## customization
 
