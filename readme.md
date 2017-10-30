@@ -1,6 +1,6 @@
 <h1 align="center">dropout-app</h1>
 
-Dropout of the centralized web and into the p2p web! This is webapp for using [`dropout`](https://github.com/jondashkyle/dropout) with [Beaker Browser](https://beakerbrowser.com).
+Dropout of the centralized web and into the p2p web! This is a webapp for using [`dropout`](https://github.com/jondashkyle/dropout) with [Beaker Browser](https://beakerbrowser.com).
 
 ## usage
 
