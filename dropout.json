@@ -1,5 +1,6 @@
 {
   "directory": "/content",
   "microservice": "https://melodic-comfort.glitch.me/",
-  "dateformat": "mmmm dS"
+  "dateformat": "mmmm dS",
+  "forkable": true
 }

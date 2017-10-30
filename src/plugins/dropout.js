@@ -32,32 +32,38 @@ function expose (datUrl) {
     state.events.DROPOUT_WRITEPAGE = 'dropout-writepage'
     state.events.DROPOUT_DELETEPAGE = 'dropout-deletepage'
     state.events.DROPOUT_SAVEPAGE = 'dropout-savepage'
+    state.events.DROPOUT_FORK = 'dropout-fork'
 
     emitter.on(state.events.DOMCONTENTLOADED, loaded)
     emitter.on(state.events.DROPOUT_WRITEPAGE, writePage)
     emitter.on(state.events.DROPOUT_DELETEPAGE, deletePage)
     emitter.on(state.events.DROPOUT_SAVEPAGE, savePage)
+    emitter.on(state.events.DROPOUT_FORK, fork)
 
     async function loaded () {
       var config = await archive.readFile('/dropout.json')
-
       state.dropout.config = xtend(state.dropout.config, JSON.parse(config))
       state.dropout.dat = await archive.getInfo()
+      await refresh()
       state.dropout.loaded = true
-
-      refresh()
     }
 
     async function refresh () {
-      var input = await fs.readdir(state.dropout.config.directory)
-
-      input
-        .filter(file => !/(^[.#]|(?:__|~)$)/.test(file))
-        .forEach(async function (file) {
+      // very messy
+      try {
+        var input
+        input = await fs.readdir(state.dropout.config.directory)
+        input = input.filter(file => !/(^[.#]|(?:__|~)$)/.test(file))
+        input.forEach(async function (file, i) {
           var content = await readPage(file)
           state.dropout.library[file] = content
-          emitter.emit(state.events.RENDER)
+          if (i === input.length - 1) emitter.emit(state.events.RENDER)
         })
+        if (!input.length) emitter.emit(state.events.RENDER)
+      } catch (err) {
+        await fs.mkdir(state.dropout.config.directory) 
+        emitter.emit(state.events.RENDER)
+      }
     }
 
     async function readPage (basename) {
@@ -121,6 +127,18 @@ function expose (datUrl) {
     function noArchive () {
       state.dropout = false
       emitter.emit(state.events.RENDER)
+    }
+
+    async function fork (data) {
+      data = data || { }
+      await archive.download()
+      var forkedArchive = await DatArchive.fork(state.dropout.dat.url)
+      var forkedConfig = await forkedArchive.readFile('/dropout.json')
+
+      forkedConfig.forkable = false
+      await forkedArchive.writeFile('/dropout.json', forkedConfig)
+      await forkedArchive.rmdir(state.dropout.config.directory, { recursive: true })
+      if (data.redirect !== false) window.location = forkedArchive.url
     }
   }
 }

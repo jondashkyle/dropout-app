@@ -4,6 +4,7 @@ module.exports = wrapper
 
 function wrapper (view) {
   return function (state, emit) {
+    // console.log(state.dropout.loaded)
     if (!state.dropout) return noArchive()
     // return noArchive()
 

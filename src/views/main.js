@@ -3,6 +3,7 @@ var dateFormat = require('dateformat')
 var html = require('choo/html')
 var raw = require('bel/raw')
 
+var buttonFork = require('../components/button-fork')
 var buttonSave = require('../components/button-save')
 var panelSave = require('../components/panel-save')
 var wrapper = require('../components/wrapper-site')
@@ -12,9 +13,15 @@ module.exports = wrapper(view)
 function view (state, emit) {
   return html`
     <div>
-      ${elSavePage()}
-      ${pages({ pages: getPages() })}
       ${elPanelSave()}
+      ${state.dropout.dat.isOwner
+        ? elSavePage()
+        : state.dropout.config.forkable ? elFork() : ''
+      }
+      ${state.dropout.loaded
+        ? pages({ pages: getPages() })
+        : ''
+      }
     </div>
   `
 
@@ -73,7 +80,7 @@ function view (state, emit) {
   function elSavePage() {
     return buttonSave({
       active: state.ui.add.active,
-      onclick: function  (event) {
+      onclick: function (event) {
         emit(state.events.UI_ADD, { active: !state.ui.add.active })
         emit(state.events.RENDER)
         if (!state.ui.add.active) {
@@ -87,6 +94,15 @@ function view (state, emit) {
     })
   }
 
+  function elFork () {
+    return buttonFork({
+      active: false,
+      onclick: function () {
+        emit(state.events.DROPOUT_FORK)
+      }
+    })
+  }
+
   function focusInput (event) {
     if (!state.ui.add.active) return
     var el = document.querySelector('input')
@@ -95,11 +111,21 @@ function view (state, emit) {
 }
 
 function pages (props) {
-  return html`
-    <div id="pages-list" class="ff-heading pvw2">
-      ${props.pages.map(page)}
-    </div>
-  `
+  if (props.pages.length) {
+    return html`
+      <div id="pages-list" class="ff-heading pvw2">
+        ${props.pages.map(page)}
+      </div>
+    `
+  } else {
+    return html`
+      <div class="ff-sans lh1-5 vhmn100 vw100 x xjc xac p2 tac">
+        <div class="ff-heading copy fs1-5" style="max-width: 30rem">
+          Your library is empty! Click the add button in the lower-right to get started.
+        </div>
+      </div>
+    `
+  }
 }
 
 function page (props) {
