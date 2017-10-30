@@ -83,7 +83,7 @@ module.exports = class NavPage extends Nanocomponent {
     return html`
       <div class="psf t0 l0 r0 x p0-5 bgc-black fc-white fw500 ${style} ${this.state.active ? '' : 'nav-page-hide'}"">
         <div class="psa t0 l0 p0-5">
-          <a href="/" class="op50 oph100 tdn fc-white db p0-5 curp">${raw('&larr;')} Library</a>
+          <a href="/" class="op50 oph100 tdn fc-white db p0-5 curp">Library</a>
         </div>
         <div class="p0-5 c8 co2 tac toe">${props.page.title}</div>
         <div class="psa t0 r0 p0-5 x tac">
@@ -95,8 +95,11 @@ module.exports = class NavPage extends Nanocomponent {
 
     function source () {
       return html`
-        <a class="tdn fc-white db p0-5 xx op50 oph100 wsnw" href="${props.page.source}">
-          Source<div class="dib" style="transform: rotate(-45deg)">${raw('&rarr;')}</div>
+        <a
+          class="tdn fc-white db p0-5 xx op50 oph100 wsnw"
+          href="${props.page.source}"
+        >
+          Source
         </a>
       `
     }
