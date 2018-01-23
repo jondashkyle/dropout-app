@@ -59,7 +59,8 @@ Beaker requires all connections to be over https, preventing external assets suc
 - [ ] Save static HTML in addition to JSON
 - [ ] Scrape image assets (breaks with http)
 - [ ] Search/filter page list
-- [ ] Settings Panel
+- [ ] Settings Panel (design customization)
+- [ ] Separate the App from the User data (Fritter model)
 - [ ] Mark as read when reaching bottom of page
 - [ ] Keyboard shortcuts
 - [ ] Swap out arrow icons for non sf-mono svgs

@@ -84,7 +84,15 @@ var gr8css = gr8({
 
 var custom = `
   html {
-    font-size: 100%
+    font-size: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -moz-font-feature-settings:"kern" 1; 
+    -ms-font-feature-settings:"kern" 1; 
+    -o-font-feature-settings:"kern" 1; 
+    -webkit-font-feature-settings:"kern" 1; 
+    font-feature-settings:"kern" 1;
+    font-kerning: normal
   }
   
   .fab {
